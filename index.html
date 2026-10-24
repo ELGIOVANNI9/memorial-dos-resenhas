@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101010">
+  <title>Memorial dos Resenhas</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a href="#" class="logo">☠ MEMORIAL<span>.</span></a>
+    <span class="status"><span class="dot"></span> ARQUIVO ATIVO</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">⚠ DOCUMENTOS QUE DEVERIAM TER SIDO DESTRUÍDOS</p>
+      <h1>MEMORIAL DOS<br><span>RESENHAS.</span></h1>
+      <p class="subtitle">
+        O passado condena. O memorial comprova.
+        Todas as atrocidades da firma, devidamente arquivadas.
+      </p>
+      <a href="#mural" class="main-button">ACESSAR OS ARQUIVOS ↓</a>
+      <p class="disclaimer">100% resenha · 0% dignidade</p>
+    </section>
+
+    <section class="stats">
+      <div class="stat">
+        <span class="stat-number" id="total">0</span>
+        <span class="stat-label">RESENHAS</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">∞</span>
+        <span class="stat-label">VERGONHA</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">???</span>
+        <span class="stat-label">RESPONSÁVEIS</span>
+      </div>
+    </section>
+
+    <section class="wall" id="mural">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">REGISTROS OFICIAIS</p>
+          <h2>O MURAL<span>.</span></h2>
+        </div>
+        <button id="add-button" class="add-button">+ NOVA RESENHA</button>
+      </div>
+
+      <div id="form-container" class="form-container" hidden>
+        <form id="story-form">
+          <label for="story-title">Título da atrocidade</label>
+          <input id="story-title" maxlength="100"
+            placeholder="Ex.: O dia em que deu tudo errado" required>
+
+          <label for="story-author">Quem estava envolvido?</label>
+          <input id="story-author" maxlength="60"
+            placeholder="Ex.: Os suspeitos de sempre" required>
+
+          <label for="story-category">Classificação do arquivo</label>
+          <select id="story-category">
+            <option>Resenha histórica</option>
+            <option>Vergonha alheia</option>
+            <option>Frase lendária</option>
+            <option>Caos absoluto</option>
+          </select>
+
+          <label for="story-description">Conte o que aconteceu</label>
+          <textarea id="story-description" maxlength="3000" rows="5"
+            placeholder="Registre os acontecimentos. Não poupe detalhes da história..." required></textarea>
+
+          <div class="form-actions">
+            <button type="button" id="cancel-button" class="cancel-button">
+              CANCELAR
+            </button>
+            <button type="submit" class="main-button">
+              ARQUIVAR RESENHA
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="filters">
+        <input id="search" type="search"
+          placeholder="🔎 Procurar uma resenha..." aria-label="Buscar resenhas">
+        <span id="results-label">CARREGANDO ARQUIVOS...</span>
+      </div>
+
+      <div id="story-list" class="story-list"></div>
+    </section>
+
+    <footer>
+      <p>MEMORIAL DOS RESENHAS © <span id="year"></span></p>
+      <p>SE VOCÊ ESTÁ AQUI, PROVAVELMENTE ESTAVA ENVOLVIDO.</p>
+    </footer>
+  </main>
+</body>
+</html>
